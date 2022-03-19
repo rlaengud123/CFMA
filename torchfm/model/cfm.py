@@ -4,13 +4,6 @@ from torchfm.layer import (AttentionalFactorizationMachine, FeaturesEmbedding,
                            FeaturesLinear, Conv_block1D)
 
 class ConvFM(torch.nn.Module):
-    """
-    A pytorch implementation of Attentional Factorization Machine.
-
-    Reference:
-        J Xiao, et al. Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks, 2017.
-    """
-
     def __init__(self, field_dims, embed_dim, attn_size, dropouts):
         super().__init__()
         self.embed_dim = embed_dim
